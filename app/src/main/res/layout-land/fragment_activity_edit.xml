@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="AddActivityFragment"
+    android:padding="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/UpdateActivityNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="272dp"
+                android:layout_marginLeft="272dp"
+                android:layout_marginEnd="272dp"
+                android:layout_marginRight="272dp"
+                android:ems="10"
+                android:fontFamily="@font/questrial"
+                android:hint="Activity name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/feelingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="166dp"
+                android:layout_marginLeft="166dp"
+                android:layout_marginEnd="166dp"
+                android:layout_marginRight="166dp"
+                android:fontFamily="@font/questrial"
+                android:padding="10dp"
+                android:text="Select mood that can describe your feelings:"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/UpdatechoiceCategoryTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UpdateActivityNameText"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
+
+            <RadioGroup
+                android:id="@+id/feelingsGroup"
+                android:layout_width="362dp"
+                android:layout_height="71dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/UpdatechoiceCategoryTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.544"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feelingsText">
+
+                <RadioButton
+                    android:id="@+id/sad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="Sad"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="Happy"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/tired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="Tired"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="Rested"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/UpdatechoiceCategoryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/questrial"
+                android:gravity="center_horizontal"
+                android:text="Select the type of activity for your new activity: "
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feelingsGroup" />
+
+            <RadioGroup
+                android:id="@+id/UpdateCategoryRadioGroup"
+                android:layout_width="409dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/editButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UpdatechoiceCategoryTV">
+
+                <RadioButton
+                    android:id="@+id/updatetimeButton"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded"
+                    android:button="@null"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:shadowColor="@color/colorPrimary"
+                    android:text="Time"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="@color/background"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updateincButton"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded"
+                    android:button="@null"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="Increment"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatequantityButton"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded"
+                    android:button="@null"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:shadowColor="@color/colorPrimary"
+                    android:text="Quantity"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/updatedescriptionUnitTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/questrial"
+                android:gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="Select the unit of measure"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UpdateCategoryRadioGroup"
+                tools:ignore="MissingConstraints" />
+
+
+            <RadioGroup
+                android:id="@+id/updatemeasureUnitGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="71dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/editButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/updatedescriptionUnitTV">
+
+                <RadioButton
+                    android:id="@+id/updatebpm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="bpm"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatekcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="kcal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatelitar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="l"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatekg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="kg"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatekm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="km"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="m"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/updatedecriptionIncTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/questrial"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="Select the increment for which it is increasing"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/updateincGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UpdateCategoryRadioGroup"
+                tools:ignore="MissingConstraints" />
+
+            <RadioGroup
+                android:id="@+id/updateincGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/editButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updatedecriptionIncTV">
+
+                <RadioButton
+                    android:id="@+id/updatejedan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatepet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="5"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatedeset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="10"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatepetnaest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="15"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatedvadeset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="20"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/updatedvadesetpet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/questrial"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingTop="10dp"
+                    android:shadowColor="@color/colorAccent"
+                    android:text="25"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/updateEditAct"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/rounded"
+                android:clickable="true"
+                android:fontFamily="@font/questrial"
+                android:foregroundGravity="center"
+                android:padding="10dp"
+                android:text="EDIT"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/updatemeasureUnitGroup"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CategoryEditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="60dp">
+
+        <EditText
+            android:id="@+id/updateCategoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/questrial"
+            android:hint="Name of a category"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="146dp" />
+
+        <EditText
+            android:id="@+id/updateCategoryDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:fontFamily="@font/questrial"
+            android:hint="Description"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/updateCategoryName"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="98dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateCategoryDesc"
+            app:layout_constraintVertical_bias="0.124"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded"
+                android:fontFamily="@font/questrial"
+                android:foregroundGravity="center|center_horizontal"
+                android:gravity="center"
+                android:text="Edit"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CategoryDesc"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

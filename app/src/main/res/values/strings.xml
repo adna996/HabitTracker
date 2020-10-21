@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Accomplished</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stop">Stop Timer</string>
+    <string name="start">Start Timer</string>
+    <string name="working">Started</string>
+    <string name="stopped">Stopped</string>
+
+    <string name="about">Accomplished app is an unique app for habit tracking.
+        This app makes managing mutliple habits at once simple without sacrificing more advanced features.
+        With simple interface, Accomplished provides multiple options for checking
+        a habits. You can customize your habits separating them by categories, where
+        each category has its own activites. If you need to customize your activities for
+        tracking activities like reading or meditating for a certain period you can create an
+        time activity and use timer for it. Also, if you’re trying to get your steps in or drink more water,
+        by quantity type of activity  Accomplished allows you to enter units of measurement and track your habits.
+        Also there is an unique way to follow your progress by increment type of activity.
+        So, if you are bad with completing and planning your habits, Accomplished will be good
+        greate choice for you.
+
+    </string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

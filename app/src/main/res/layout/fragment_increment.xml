@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".IncrementFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+
+        >
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/rounded2"
+        android:fontFamily="@font/questrial"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/decrease"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/questrial"
+        android:foregroundGravity="center"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/numberInc"
+        android:layout_width="72dp"
+        android:layout_height="71dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/questrial"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/increase"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+        android:background="@drawable/rounded"
+        android:fontFamily="@font/questrial"
+        android:foregroundGravity="center_vertical"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="36sp" />
+</FrameLayout>

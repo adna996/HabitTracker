@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.accomplished.StartFragment"
+        android:label="Welcome to Accomplished"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceFragment"
+        android:name="com.example.accomplished.ChoiceFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_choice">
+        <action
+            android:id="@+id/action_choiceFragment_to_AddCategoryFragment"
+            app:destination="@id/addCategoryFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_activityFragment"
+            app:destination="@id/activityFragment" />
+        <action
+            android:id="@+id/action_choiceFragment_to_categoryEditFragment"
+            app:destination="@id/categoryEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCategoryFragment"
+        android:name="com.example.accomplished.AddCategoryFragment"
+        android:label="Add new category"
+        tools:layout="@layout/fragment_add_category" >
+        <action
+            android:id="@+id/action_addCategoryFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+        <argument
+            android:name="CategoryName"
+            app:argType="string" />
+        <argument
+            android:name="CategoryDesc"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityFragment"
+        android:name="com.example.accomplished.ActivityFragment"
+        android:label="Activities" >
+        <action
+            android:id="@+id/action_activityFragment_to_addActivityFragment"
+            app:destination="@id/addActivityFragment" />
+        <argument
+            android:name="postion"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <action
+            android:id="@+id/action_activityFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <argument
+            android:name="time"
+            app:argType="string"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_activityFragment_to_choiceFragment"
+            app:popUpTo="@id/choiceFragment" />
+        <action
+            android:id="@+id/action_activityFragment_to_incrementFragment"
+            app:destination="@id/incrementFragment" />
+        <action
+            android:id="@+id/action_activityFragment_to_quantityFragment"
+            app:destination="@id/quantityFragment" />
+        <action
+            android:id="@+id/action_activityFragment_to_activityEditFragment"
+            app:destination="@id/activityEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addActivityFragment"
+        android:name="com.example.accomplished.AddActivityFragment"
+        android:label="Add your activity" >
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addActivityFragment_to_activityFragment"
+            app:popUpTo="@id/activityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.accomplished.TimerFragment"
+        android:label="Timer">
+        <argument
+            android:name="actId"
+            app:argType="integer" />
+        <argument
+            android:name="catId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_timerFragment_to_activityFragment"
+            app:destination="@id/activityFragment"
+            app:popUpTo="@id/activityFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/incrementFragment"
+        android:name="com.example.accomplished.IncrementFragment"
+        android:label="Increment"
+        tools:layout="@layout/fragment_increment">
+        <argument
+            android:name="actId"
+            app:argType="integer" />
+        <argument
+            android:name="catId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_incrementFragment_to_activityFragment"
+            app:destination="@id/activityFragment"
+            app:popUpTo="@id/activityFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/quantityFragment"
+        android:name="com.example.accomplished.QuantityFragment"
+        android:label="Quantity"
+        tools:layout="@layout/fragment_quantity">
+        <action
+            android:id="@+id/action_quantityFragment_to_activityFragment"
+            app:destination="@id/activityFragment"
+            app:popUpTo="@id/activityFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="actId"
+            app:argType="integer" />
+        <argument
+            android:name="catId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryEditFragment"
+        android:name="com.example.accomplished.CategoryEditFragment"
+        android:label="Update category"
+        tools:layout="@layout/fragment_category_edit" >
+        <action
+            android:id="@+id/action_categoryEditFragment_to_choiceFragment"
+            app:destination="@id/choiceFragment" />
+        <argument
+            android:name="posId"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="currentCat"
+            app:argType="com.example.accomplished.database.Category" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/activityEditFragment"
+        android:name="com.example.accomplished.ActivityEditFragment"
+        android:label="Edit your activity"
+        tools:layout="@layout/fragment_activity_edit" >
+        <action
+            android:id="@+id/action_activityEditFragment_to_activityFragment"
+            app:destination="@id/activityFragment"
+            app:popUpTo="@id/activityFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="posAct"
+            app:argType="integer" />
+        />
+        <argument
+            android:name="currentAct"
+            app:argType="com.example.accomplished.database.Activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.accomplished.AboutFragment"
+        android:label="About app"
+        tools:layout="@layout/fragment_about" />
+
+</navigation>
